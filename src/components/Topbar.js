@@ -3,7 +3,7 @@ import TopbarProfilepic from "../assets/person/1.jpeg";
 
 export default function Topbar() {
   return (
-    <div className="topbarContainer h-[10vh] w-full bg-blue-500 sticky top-0 flex items-center">
+    <div className="topbarContainer h-[10vh] w-full bg-blue-500 sticky top-0 flex items-center z-10">
       <div className="topbarLeft flex-1">
         <span className="logo ml-4 text-white font-bold cursor-pointer text-2xl">
           Henrysocial
