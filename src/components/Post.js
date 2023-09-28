@@ -3,6 +3,7 @@ import PostProfile from "../assets/person/1.jpeg";
 // import PostImg from "../assets/post/1.jpeg";
 import LikeIcon from "../assets/like.png";
 import LoveIcon from "../assets/heart.png";
+import { Users } from "../dummyData";
 
 export default function Post({ post }) {
   return (
@@ -12,10 +13,13 @@ export default function Post({ post }) {
           <div className="postTopLeft flex items-center cursor-pointer">
             <img
               className="h-8 w-8 object-cover rounded-full cursor-pointer mr-2"
-              src={PostProfile}
+              src={Users.filter((u) => u.id === post.userId)[0].profilePicture}
               alt=""
             />
-            <span className="postUserName mr-2 font-bold">Henry Igwe</span>
+            <span className="postUserName mr-2 font-bold">
+              {Users.filter((u) => u.id === post?.userId)[0].username}
+              {/* This code iterates through the users array, checks the u.id that === post.userId. returns the first array(index 0) of the username */}
+            </span>
             <span className="postDate text-sm">{post.date}</span>
           </div>
           <div className="postTopRight">
@@ -48,7 +52,7 @@ export default function Post({ post }) {
           </div>
           <div className="postBottomRight">
             <span className="postCommentText border-b-2 border-dotted border-gray-300">
-              {post.comment}
+              {post.comment} Comments
             </span>
           </div>
         </div>
