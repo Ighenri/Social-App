@@ -1,10 +1,10 @@
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import PostProfile from "../assets/person/1.jpeg";
-import PostImg from "../assets/post/1.jpeg";
+// import PostImg from "../assets/post/1.jpeg";
 import LikeIcon from "../assets/like.png";
 import LoveIcon from "../assets/heart.png";
 
-export default function Post() {
+export default function Post({ post }) {
   return (
     <div className="post">
       <div className="postwrapper p-3 rounded-lg">
@@ -16,17 +16,17 @@ export default function Post() {
               alt=""
             />
             <span className="postUserName mr-2 font-bold">Henry Igwe</span>
-            <span className="postDate text-sm">3 mins ago</span>
+            <span className="postDate text-sm">{post.date}</span>
           </div>
           <div className="postTopRight">
             <MoreVertIcon className="cursor-pointer" />
           </div>
         </div>
         <div className="postCenter">
-          <p className="postText my-4">Hello, i am here to make you happy</p>
+          <p className="postText my-4">{post?.desc}</p>
           <img
             className="w-full max-h[500px] object-contain"
-            src={PostImg}
+            src={post.photo}
             alt=""
           />
         </div>
@@ -42,11 +42,13 @@ export default function Post() {
               src={LoveIcon}
               alt=""
             />
-            <span className="postLikeCounter text-sm">32 People like it</span>
+            <span className="postLikeCounter text-sm">
+              {post.like} People like it
+            </span>
           </div>
           <div className="postBottomRight">
             <span className="postCommentText border-b-2 border-dotted border-gray-300">
-              9 comments
+              {post.comment}
             </span>
           </div>
         </div>
