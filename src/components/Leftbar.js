@@ -9,7 +9,8 @@ import {
   EventNote,
   School,
 } from "@mui/icons-material";
-import LeftBarImg from "../assets/person/2.jpeg";
+import { Users } from "../dummyData";
+import Closefriend from "./Closefriend";
 
 export default function Leftbar() {
   return (
@@ -58,110 +59,9 @@ export default function Leftbar() {
           <hr className="border-1 border-black my-2 mr-4" />
         </ul>
         <ul className="leftbarFriendList ">
-          <li className="leftbarFriendListItem flex mb-2">
-            <img
-              src={LeftBarImg}
-              className="leftbarFriendImg h-6 w-6 rounded-full mr-3 object-cover"
-              alt=""
-            />
-            <span className="leftbarFriendName">Henry Igwe</span>
-          </li>
-          <li className="leftbarFriendListItem flex mb-2">
-            <img
-              src={LeftBarImg}
-              className="leftbarFriendImg h-6 w-6 rounded-full mr-3 object-cover"
-              alt=""
-            />
-            <span className="leftbarFriendName">Mario Hu</span>
-          </li>
-          <li className="leftbarFriendListItem flex mb-2">
-            <img
-              src={LeftBarImg}
-              className="leftbarFriendImg h-6 w-6 rounded-full mr-3 object-cover"
-              alt=""
-            />
-            <span className="leftbarFriendName">James Rio</span>
-          </li>
-          <li className="leftbarFriendListItem flex mb-2">
-            <img
-              src={LeftBarImg}
-              className="leftbarFriendImg h-6 w-6 rounded-full mr-3 object-cover"
-              alt=""
-            />
-            <span className="leftbarFriendName">Alex Brown</span>
-          </li>
-          <li className="leftbarFriendListItem flex mb-2">
-            <img
-              src={LeftBarImg}
-              className="leftbarFriendImg h-6 w-6 rounded-full mr-3 object-cover"
-              alt=""
-            />
-            <span className="leftbarFriendName">Sandy Trio</span>
-          </li>
-          <li className="leftbarFriendListItem flex mb-2">
-            <img
-              src={LeftBarImg}
-              className="leftbarFriendImg h-6 w-6 rounded-full mr-3 object-cover"
-              alt=""
-            />
-            <span className="leftbarFriendName">James Mike</span>
-          </li>
-          <li className="leftbarFriendListItem flex mb-2">
-            <img
-              src={LeftBarImg}
-              className="leftbarFriendImg h-6 w-6 rounded-full mr-3 object-cover"
-              alt=""
-            />
-            <span className="leftbarFriendName">King Nath</span>
-          </li>
-          <li className="leftbarFriendListItem flex mb-2">
-            <img
-              src={LeftBarImg}
-              className="leftbarFriendImg h-6 w-6 rounded-full mr-3 object-cover"
-              alt=""
-            />
-            <span className="leftbarFriendName">King Nath</span>
-          </li>
-          <li className="leftbarFriendListItem flex mb-2">
-            <img
-              src={LeftBarImg}
-              className="leftbarFriendImg h-6 w-6 rounded-full mr-3 object-cover"
-              alt=""
-            />
-            <span className="leftbarFriendName">King Nath</span>
-          </li>
-          <li className="leftbarFriendListItem flex mb-2">
-            <img
-              src={LeftBarImg}
-              className="leftbarFriendImg h-6 w-6 rounded-full mr-3 object-cover"
-              alt=""
-            />
-            <span className="leftbarFriendName">King Nath</span>
-          </li>
-          <li className="leftbarFriendListItem flex mb-2">
-            <img
-              src={LeftBarImg}
-              className="leftbarFriendImg h-6 w-6 rounded-full mr-3 object-cover"
-              alt=""
-            />
-            <span className="leftbarFriendName">King Nath</span>
-          </li>
-          <li className="leftbarFriendListItem flex mb-2">
-            <img
-              src={LeftBarImg}
-              className="leftbarFriendImg h-6 w-6 rounded-full mr-3 object-cover"
-              alt=""
-            />
-            <span className="leftbarFriendName">King Nath</span>
-          </li>
-          <li className="leftbarFriendListItem flex mb-2">
-            <img
-              src={LeftBarImg}
-              className="leftbarFriendImg h-6 w-6 rounded-full mr-3 object-cover"
-              alt=""
-            />
-            <span className="leftbarFriendName">King Nath</span>
-          </li>
+          {Users.map((u) => {
+            return <Closefriend key={u.id} closeF={u} />;
+          })}
         </ul>
       </div>
     </div>

@@ -8,7 +8,7 @@ import Post7 from "./assets/post/7.jpeg";
 import Post8 from "./assets/post/8.jpeg";
 import Post9 from "./assets/post/9.jpeg";
 import Post10 from "./assets/post/10.jpeg";
-import ProfilePic1 from "./assets/person/1.jpeg";
+import ProfilePic1 from "./assets/person/7.jpeg";
 import ProfilePic2 from "./assets/person/2.jpeg";
 import ProfilePic3 from "./assets/person/3.jpeg";
 import ProfilePic4 from "./assets/person/4.jpeg";
@@ -89,7 +89,7 @@ export const Posts = [
     date: "15 mins ago",
     userId: 2,
     like: 2,
-    comment: 1,
+    comment: 10,
   },
   {
     id: 3,

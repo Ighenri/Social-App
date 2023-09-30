@@ -1,6 +1,7 @@
 import BirthdayGift from "../assets/gift.png";
 import ImageAd from "../assets/ad.png";
 import Online from "./online";
+import { Users } from "../dummyData";
 
 export default function Rightbar() {
   return (
@@ -19,7 +20,9 @@ export default function Rightbar() {
         />
         <h4 className="rightBarTitle mt-3 font-bold">Online Friends</h4>
         <ul className="rightBarFriendsList">
-          <Online />
+          {Users.map((u) => {
+            return <Online key={u.id} user={u} />;
+          })}
         </ul>
       </div>
     </div>

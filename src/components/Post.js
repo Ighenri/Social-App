@@ -3,8 +3,16 @@ import PostProfile from "../assets/person/1.jpeg";
 import LikeIcon from "../assets/like.png";
 import LoveIcon from "../assets/heart.png";
 import { Users } from "../dummyData";
+import { useState } from "react";
 
 export default function Post({ post }) {
+  const [Liked, setLiked] = useState(false);
+  const [Likecount, setLikeCount] = useState(post.like);
+
+  const likeHandler = () => {
+    setLiked(!Liked);
+    setLikeCount(Liked ? Likecount - 1 : Likecount + 1); //if like is truthy, decrease by 1, if it is falsy increase by 1
+  };
   return (
     <div className="post">
       <div className="postwrapper p-3 rounded-lg">
@@ -39,15 +47,18 @@ export default function Post({ post }) {
               className="likeIcon h-6 mr-2 cursor-pointer"
               src={LikeIcon}
               alt=""
+              onClick={likeHandler}
             />
             <img
               className="likeIcon h-6 mr-2 cursor-pointer"
               src={LoveIcon}
               alt=""
+              onClick={likeHandler}
             />
             <span className="postLikeCounter text-sm">
-              {post.like} People like it
-            </span>
+              {Likecount} People like it{" "}
+              {/* {Likecount} stays the value from the likecount useState */}
+            </span>{" "}
           </div>
           <div className="postBottomRight">
             <span className="postCommentText border-b-2 border-dotted border-gray-300">
