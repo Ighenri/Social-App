@@ -1,6 +1,5 @@
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import PostProfile from "../assets/person/1.jpeg";
-// import PostImg from "../assets/post/1.jpeg";
 import LikeIcon from "../assets/like.png";
 import LoveIcon from "../assets/heart.png";
 import { Users } from "../dummyData";

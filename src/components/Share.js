@@ -5,6 +5,7 @@ import {
   LocationOn,
   EmojiEmotions,
 } from "@mui/icons-material";
+
 export default function Share() {
   return (
     <div className="share h-36 w-full">

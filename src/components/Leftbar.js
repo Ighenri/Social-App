@@ -13,7 +13,7 @@ import LeftBarImg from "../assets/person/2.jpeg";
 
 export default function Leftbar() {
   return (
-    <div className="leftBar w-1/4 h-[calc(100vh-10vh)] overflow-y-scroll">
+    <div className="leftBar w-1/4 h-[calc(100vh-10vh)] overflow-y-scroll sticky top-[10vh]">
       <div className="leftbarWrapper pl-4">
         <ul className="leftbarList">
           <li className="leftbarListItem mb-4 pt-3">
