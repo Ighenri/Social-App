@@ -14,7 +14,7 @@ import Closefriend from "./Closefriend";
 
 export default function Leftbar() {
   return (
-    <div className="leftBar w-1/4 h-[calc(100vh-10vh)] overflow-y-scroll sticky top-[10vh]">
+    <div className="leftBar w-[25%] h-[calc(100vh-10vh)] overflow-y-scroll sticky top-[10vh]">
       <div className="leftbarWrapper pl-4">
         <ul className="leftbarList">
           <li className="leftbarListItem mb-4 pt-3">

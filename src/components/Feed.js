@@ -4,7 +4,7 @@ import { Posts } from "../dummyData";
 
 export default function Feed() {
   return (
-    <div className="feed w-1/2 h-[90vh]">
+    <div className="feed flex-grow h-[90vh]">
       <div className="feedWrapper p-5">
         <Share />
         {Posts.map((p) => {

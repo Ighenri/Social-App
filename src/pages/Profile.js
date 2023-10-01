@@ -36,7 +36,7 @@ export default function Profile() {
           </div>
           <div className="profileRightBottom flex">
             <Feed />
-            <Rightbar />
+            <Rightbar profile />
           </div>
         </div>
       </div>
